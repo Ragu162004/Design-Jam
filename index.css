@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Marhey:wght@300..700&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Marhey:wght@300..700&family=Namdhinggo:wght@400;500;600;700;800&family=Outfit:wght@100..900&family=Tilt+Neon&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(hsla(0, 0%, 0%, 0) 0%,
+      hsla(204, 56%, 10%, 0.05) 2%,
+      hsla(204, 56%, 10%, 0.5) 10%,
+      hsla(204, 56%, 10%, 0.8) 19%,
+      #0B1C27 25%,
+      #0B1C27 100%);
+}
+
+
+.home img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  max-height: 95vh;
+}
+
+li {
+  list-style: none;
+}
+
+.container a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 700;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #ffff;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.container {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .logo a {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.container .links {
+  display: flex;
+  gap: 3rem;
+}
+
+.container .user i {
+  color: #ffff;
+  transition: all .5s ease-in-out;
+}
+
+.container a {
+  transition: all .5s ease-in-out;
+}
+
+
+.container a:hover {
+  background-color: #ECCA7F;
+  padding: 0.4em;
+  border-radius: 4px;
+  color: #000;
+}
+
+.main {
+  display: flex;
+  margin: 10% auto;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.main .center p:first-child {
+  width: 100%;
+  color: #ECCA7F;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  font-weight: 500;
+  padding-left: 80px;
+}
+
+.main .center p:nth-child(2) {
+  font-weight: 600;
+  font-size: 4rem;
+  color: #ffff;
+  letter-spacing: 1px;
+}
+
+.main .center .hike::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 0.1em;
+  background: #ECCA7F;
+  top: 3%;
+  left: 10px;
+  position: absolute;
+}
+
+.main .icons {
+  color: #ffff;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+
+}
+
+.main .icons .follow {
+  transform: rotate(90deg);
+  margin-bottom: 1em;
+  font-weight: 900;
+}
+
+.main .icons .icon {
+  padding: 30px;
+  font-weight: 1000;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.main .icons .icon p {
+  margin-bottom: 1.25em;
+}
+
+.main .center p:last-child {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.main .center p a {
+  color: #ffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.page1 {
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.page1 .main,
+.page1 .image {
+  z-index: 1;
+}
+
+.page1 .image {
+  margin-right: 10%;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+
+.page1 .image:hover {
+  filter: brightness(95%);
+}
+
+.page1 .main {
+  color: #ffff;
+  position: relative;
+}
+
+.page1 .main .hike::before {
+  content: "";
+  display: block;
+  width: 5em;
+  height: 0.2em;
+  margin-top: 0.4%;
+  left: 12%;
+  background: #ECCA7F;
+  position: absolute;
+}
+
+.page1 .main .hike {
+  width: 100%;
+  color: #ECCA7F;
+  font-size: 0.6em;
+  font-weight: 800;
+  padding-left: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page1 .main {
+  bottom: 15%;
+}
+
+.page1 .main div {
+  width: 50%;
+}
+
+.page1 .main b {
+  font-size: 7rem;
+  position: absolute;
+  bottom: 55%;
+  opacity: 0.1;
+  font-weight: 800;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+.page1 .main p {
+  margin: 1% 10%;
+  opacity: 0.9;
+  max-width: 120ch;
+  text-align: justify;
+}
+
+.page1 .main p:nth-child(3) {
+  font-size: 1.5rem;
+}
+
+.page1 .main a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #ECCA7F;
+}
+
+.page2 {
+  display: flex;
+  height: 85vh;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.page2 .main,
+.page2 .image {
+  z-index: 1;
+}
+
+.page2 .image {
+  margin-right: 10%;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+
+.page2 .image:hover {
+  filter: brightness(95%);
+}
+
+.page2 .main {
+  color: #ffff;
+  position: relative;
+}
+
+.page2 .main .hike::before {
+  content: "";
+  display: block;
+  width: 5em;
+  height: 0.2em;
+  top: 29%;
+  left: 47.5%;
+  background: #ECCA7F;
+  position: absolute;
+}
+
+.page2 .main .hike {
+  width: 100%;
+  color: #ECCA7F;
+  font-size: 0.6em;
+  font-weight: 800;
+  padding-left: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page2 .main {
+  bottom: 15%;
+}
+
+.page2 .main div {
+  width: 50%;
+  right: 10%;
+}
+
+.page2 .main b {
+  font-size: 7rem;
+  position: absolute;
+  bottom: 55%;
+  right: 50%;
+  opacity: 0.1;
+  font-weight: 800;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+.page2 .main p {
+  opacity: 0.9;
+  padding: 1%;
+  text-align: justify;
+  max-width: 100ch;
+}
+
+.page2 .main p:nth-child(3) {
+  font-size: 1.5rem;
+}
+
+.page2 .main a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #ECCA7F;
+}
+
+.page3 {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.page3 .main,
+.page3 .image {
+  z-index: 1;
+}
+
+.page3 .image {
+  margin-right: 10%;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+
+.page3 .image:hover {
+  filter: brightness(95%);
+}
+
+.page3 .main {
+  color: #ffff;
+  position: relative;
+}
+
+.page3 .main .hike::before {
+  content: "";
+  display: block;
+  width: 5em;
+  height: 0.2em;
+  margin-top: 0.4%;
+  left: 12%;
+  background: #ECCA7F;
+  position: absolute;
+}
+
+.page3 .main .hike {
+  width: 100%;
+  color: #ECCA7F;
+  font-size: 0.6em;
+  font-weight: 800;
+  padding-left: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page3 .main {
+  bottom: 15%;
+}
+
+.page3 .main div {
+  width: 50%;
+}
+
+.page3 .main b {
+  font-size: 7rem;
+  position: absolute;
+  bottom: 53%;
+  opacity: 0.1;
+  font-weight: 800;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+.page3 .main p {
+  margin: 1% 10%;
+  opacity: 0.9;
+  max-width: 120ch;
+  text-align: justify;
+}
+
+.page3 .main p:nth-child(3) {
+  font-size: 1.5rem;
+}
+
+.page3 .main a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #ECCA7F;
+}
+
+.footer {
+  display: flex;
+  height: 50vh;
+  font-family: "Outfit", sans-serif;
+}
+
+.footer .main {
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.footer .main .info div {
+  margin: 3rem;
+  color: #ffff;
+}
+
+.footer .main .info div .logo {
+  color: #ffff;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.footer p {
+  opacity: .88;
+}
+
+.footer .main .info div p {
+  margin: 0.4em;
+}
+
+.footer .main .info div p:nth-child(2) {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.footer .main .info div:nth-child(2) {
+  font-size: 0.7em;
+  opacity: 0.5;
+}
+
+.footer .main .about {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footer .main .about .about__us p:nth-child(1) {
+  color: #ECCA7F;
+}
+
+.footer .main .about .about__us p {
+  color: #ffff;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.footer .main .about .additional__info p:nth-child(1) {
+  color: #ECCA7F;
+}
+
+.footer .main .about .additional__info p {
+  color: #ffff;
+  margin-top: 1em;
+  cursor: pointer;
+}
