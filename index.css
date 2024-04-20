@@ -80,11 +80,11 @@ header {
 
 .container .user i {
   color: #ffff;
-  transition: all .5s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .container a {
-  transition: all .5s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 
