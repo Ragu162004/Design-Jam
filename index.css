@@ -2,6 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Marhey:wght@300..700&family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Marhey:wght@300..700&family=Namdhinggo:wght@400;500;600;700;800&family=Outfit:wght@100..900&family=Tilt+Neon&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+:root {
+  --text-hover-color:#000;
+  --hero-bg-shade: linear-gradient(hsla(0, 0%, 0%, 0) 0%,
+  hsla(204, 56%, 10%, 0.05) 2%,
+  hsla(204, 56%, 10%, 0.5) 10%,
+  hsla(204, 56%, 10%, 0.8) 19%,
+  #0B1C27 25%,
+  #0B1C27 100%);
+  --text-color:#fff;
+  --header-hover-bg:#f4f4f4;
+  --main-color: #ECCA7F;
+  --helper-bg: #8d8d8d;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0B1C27 ;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 20px;  
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +39,6 @@
 
 .hero {
   width: 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
   position: relative;
 }
 
@@ -24,20 +47,13 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(hsla(0, 0%, 0%, 0) 0%,
-      hsla(204, 56%, 10%, 0.05) 2%,
-      hsla(204, 56%, 10%, 0.5) 10%,
-      hsla(204, 56%, 10%, 0.8) 19%,
-      #0B1C27 25%,
-      #0B1C27 100%);
+  background-image: var(--hero-bg-shade)
 }
-
 
 .home img {
   position: absolute;
   z-index: -1;
   width: 100%;
-  max-height: 95vh;
 }
 
 li {
@@ -50,7 +66,7 @@ li {
   font-weight: 700;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #ffff;
+  color: var(--text-color);
 }
 
 header {
@@ -68,9 +84,10 @@ header {
   justify-content: space-between;
 }
 
-.container .logo a {
-  font-size: 1.2rem;
+.container .logo {
+  font-size: 1.3rem;
   font-weight: 900;
+  color: var(--text-color);
 }
 
 .container .links {
@@ -79,20 +96,21 @@ header {
 }
 
 .container .user i {
-  color: #ffff;
-  transition: all .5s ease-in-out;
+  color: var(--text-color);
+  transition: all .1s ease-in-out;
 }
 
 .container a {
-  transition: all .5s ease-in-out;
+  transition: all .1s ease-in-out;
+  padding: 0.4em;
+  border-radius: 4px;
 }
 
 
 .container a:hover {
-  background-color: #ECCA7F;
-  padding: 0.4em;
-  border-radius: 4px;
-  color: #000;
+  background-color: var(--header-hover-bg);
+  outline: 1px solid var(--header-hover-bg);
+  color: var(--text-hover-color);
 }
 
 .main {
@@ -112,7 +130,7 @@ header {
 
 .main .center p:first-child {
   width: 100%;
-  color: #ECCA7F;
+  color: var(--main-color);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.8em;
@@ -123,7 +141,7 @@ header {
 .main .center p:nth-child(2) {
   font-weight: 600;
   font-size: 4rem;
-  color: #ffff;
+  color: var(--text-color);
   letter-spacing: 1px;
 }
 
@@ -132,14 +150,14 @@ header {
   display: block;
   width: 60px;
   height: 0.1em;
-  background: #ECCA7F;
+  background: var(--main-color);
   top: 3%;
   left: 10px;
   position: absolute;
 }
 
 .main .icons {
-  color: #ffff;
+  color: var(--text-color);
   font-size: 1.1em;
   text-transform: capitalize;
   display: flex;
@@ -171,10 +189,62 @@ header {
 }
 
 .main .center p a {
-  color: #ffff;
+  color: var(--text-color);
   text-decoration: none;
   letter-spacing: 1px;
 }
+
+.helper {
+  right: 3%;
+  position: fixed;
+}
+
+.helper li{
+  list-style: none;
+  padding: 20px 20px;
+  text-align: right;
+}
+
+.helper li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.helper ul {
+  position: relative;
+  height: 200px;
+}
+.helper ul:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  margin-left: 20px;
+  right: 0;
+  top: 20px;
+  height: 100%;
+  background-color: var(--helper-bg);
+  z-index: 1111;
+  border-radius: 30px;
+}
+
+.helper ul li a::before{
+  content: "";
+  position: absolute;
+  width: 4px;
+  margin-left: 20px;
+  right: 0;
+  height: 0%;
+  background-color: var(--text-color);
+  z-index: 111111;
+  border-radius: 20px;
+  transition: all 0.1s ease;
+}
+
+.helper ul li a.active::before {
+  transition: all 0.1s ease-in-out;
+  height: 15%;
+}
+
 
 .page1 {
   display: flex;
@@ -201,7 +271,7 @@ header {
 }
 
 .page1 .main {
-  color: #ffff;
+  color: var(--text-color);
   position: relative;
 }
 
@@ -212,13 +282,13 @@ header {
   height: 0.2em;
   margin-top: 0.4%;
   left: 12%;
-  background: #ECCA7F;
+  background: var(--main-color);
   position: absolute;
 }
 
 .page1 .main .hike {
   width: 100%;
-  color: #ECCA7F;
+  color: var(--main-color);
   font-size: 0.6em;
   font-weight: 800;
   padding-left: 80px;
@@ -257,7 +327,7 @@ header {
 .page1 .main a {
   text-decoration: none;
   text-transform: lowercase;
-  color: #ECCA7F;
+  color: var(--main-color);
 }
 
 .page2 {
@@ -285,7 +355,7 @@ header {
 }
 
 .page2 .main {
-  color: #ffff;
+  color: var(--text-color);
   position: relative;
 }
 
@@ -296,13 +366,13 @@ header {
   height: 0.2em;
   top: 29%;
   left: 47.5%;
-  background: #ECCA7F;
+  background: var(--main-color);
   position: absolute;
 }
 
 .page2 .main .hike {
   width: 100%;
-  color: #ECCA7F;
+  color: var(--main-color);
   font-size: 0.6em;
   font-weight: 800;
   padding-left: 80px;
@@ -343,12 +413,12 @@ header {
 .page2 .main a {
   text-decoration: none;
   text-transform: lowercase;
-  color: #ECCA7F;
+  color: var(--main-color);
 }
 
 .page3 {
   display: flex;
-  height: 70vh;
+  height: 80vh;
   width: 100%;
   justify-content: center;
   margin: 0 auto;
@@ -371,7 +441,7 @@ header {
 }
 
 .page3 .main {
-  color: #ffff;
+  color: var(--text-color);
   position: relative;
 }
 
@@ -382,13 +452,13 @@ header {
   height: 0.2em;
   margin-top: 0.4%;
   left: 12%;
-  background: #ECCA7F;
+  background: var(--main-color);
   position: absolute;
 }
 
 .page3 .main .hike {
   width: 100%;
-  color: #ECCA7F;
+  color: var(--main-color);
   font-size: 0.6em;
   font-weight: 800;
   padding-left: 80px;
@@ -427,7 +497,7 @@ header {
 .page3 .main a {
   text-decoration: none;
   text-transform: lowercase;
-  color: #ECCA7F;
+  color: var(--main-color);
 }
 
 .footer {
@@ -444,11 +514,11 @@ header {
 
 .footer .main .info div {
   margin: 3rem;
-  color: #ffff;
+  color: var(--text-color);
 }
 
 .footer .main .info div .logo {
-  color: #ffff;
+  color: var(--text-color);
   font-size: 1.2em;
   font-weight: 700;
 }
@@ -479,21 +549,21 @@ header {
 }
 
 .footer .main .about .about__us p:nth-child(1) {
-  color: #ECCA7F;
+  color: var(--main-color);
 }
 
 .footer .main .about .about__us p {
-  color: #ffff;
+  color: var(--text-color);
   margin-top: 1em;
   cursor: pointer;
 }
 
 .footer .main .about .additional__info p:nth-child(1) {
-  color: #ECCA7F;
+  color: var(--main-color);
 }
 
 .footer .main .about .additional__info p {
-  color: #ffff;
+  color: var(--text-color);
   margin-top: 1em;
   cursor: pointer;
 }

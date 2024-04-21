@@ -14,12 +14,12 @@
     />
   </head>
   <body>
-    <section class="hero">
-      <section class="home">
+    <div class="hero">
+      <section class="home" id="home">
         <img src="./images/background.png" alt="" />
         <header>
           <div class="container">
-            <div class="logo"><a href="">MNTN</a></div>
+            <div class="logo">MNTN</div>
             <ul class="links">
               <li><a href="">Experiment</a></li>
               <li><a href="">About Us</a></li>
@@ -49,10 +49,17 @@
               <a href="#page">Scroll <i class="fa-solid fa-arrow-down"></i></a>
             </p>
           </div>
-          <div class="helper"></div>
+          <div class="helper">
+            <ul id="helper">
+              <li class="link"><a href="#home" class="active">Start</a></li>
+              <li class="link"><a href="#page1">01</a></li>
+              <li class="link"><a href="#page2">02</a></li>
+              <li class="link"><a href="#page3">03</a></li>
+            </ul>
+          </div>
         </div>
       </section>
-      <section class="page1" id="page">
+      <section class="page1" id="page1">
         <div class="main">
           <div>
             <b>01</b>
@@ -81,7 +88,7 @@
           />
         </div>
       </section>
-      <section class="page2">
+      <section class="page2" id="page2">
         <div class="main">
           <img
             src="./images/02.png"
@@ -110,7 +117,7 @@
           </div>
         </div>
       </section>
-      <section class="page3">
+      <section class="page3" id="page3">
         <div class="main">
           <div>
             <b>03</b>
@@ -139,7 +146,7 @@
           />
         </div>
       </section>
-      <section class="footer">
+      <section class="footer" id="footer">
         <div class="main">
           <div class="info">
             <div>
